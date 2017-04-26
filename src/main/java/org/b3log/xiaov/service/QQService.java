@@ -656,7 +656,7 @@ public class QQService {
             } catch (final UnsupportedEncodingException e) {
                 LOGGER.log(Level.ERROR, "Search key encoding failed", e);
             }
-        } else if (StringUtils.contains(content, XiaoVs.QQ_BOT_NAME)) {
+        } else{
             if (1 == QQ_BOT_TYPE) {
                 ret = turingQueryService.chat(userName, content);
                 ret = StringUtils.replace(ret, "图灵机器人", XiaoVs.QQ_BOT_NAME + "机器人");
